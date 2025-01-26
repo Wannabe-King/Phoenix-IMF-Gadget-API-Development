@@ -10,4 +10,8 @@ app.use(express.json());
 app.use("/user", userRouter);
 app.use("/gadgets", gadgetRouter);
 
-app.listen(process.env.PORT);
+const PORT = process.env.PORT || 5001;
+
+app.listen(PORT,()=>{
+    console.log(`Server is running on port ${PORT}`)
+});
