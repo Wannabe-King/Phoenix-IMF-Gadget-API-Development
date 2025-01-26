@@ -1,7 +1,7 @@
 const express = require("express");
 const { userRouter } = require("./routes/user.js");
 const gadgetRouter = require("./routes/gadget.js");
-const user =require('../prisma/')
+
 require("dotenv").config();
 
 const app = express();
