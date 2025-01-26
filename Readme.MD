@@ -14,7 +14,7 @@ This API uses JWT tokens for authentication. Include the token in the `Authoriza
 
 ### Example Header:
 ```
-Authorization: Bearer <your_token>
+authorization: <your_token>
 ```
 
 ---
