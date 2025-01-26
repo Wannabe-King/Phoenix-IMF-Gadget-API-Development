@@ -180,6 +180,10 @@ Ensure the following environment variables are set:
 
 ---
 
+## Note on Render Free Tier
+
+If you are using the Render free tier, the API service might go into "sleep mode" after a period of inactivity. The first request after the service sleeps may experience a slight delay as the service wakes up. This behavior is normal and is designed to manage resource usage on the free plan.
+
 ## Notes
 - Replace `<JWT_TOKEN>` in the examples with a valid token obtained from the `/user/login` endpoint.
 - Ensure your database is properly set up and connected before starting the server.
