@@ -61,10 +61,13 @@ function generateCode() {
   return Math.random().toString(36).substr(2, 6).toUpperCase();
 }
 
-//  Retrieve all gadgets 
+//  Retrieve all gadgets
 gadgetRouter.get("/", authenticate, async (req, res) => {
+  const { status } = req.query;
   try {
-    const gadgets = await prisma.gadget.findMany();
+    const gadgets = await prisma.gadget.findMany({
+      where: status ? { status } : {},
+    });
     if (gadgets.length == 0) {
       return res.json({
         message: "There are no gadgets availabel presently.",
